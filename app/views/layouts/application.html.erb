@@ -18,10 +18,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav class="navbar navbar-default" id="nav">
+    <!-- <div class="container-fluid"> -->
+      <div class="navbar-header">
+        <header>
+          <a class="navbar-brand" id="brand" href="/">Givalittle</a>
+        </header>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav pull-left" id="auth">
+             <li> <%= link_to "Home", root_path %></li>
+          </ul>            
+      </div><!-- /.navbar-collapse -->
+    <!-- </div>/.container-fluid -->
+ </nav>
+
 	
-<%= render "shared/navbar" %>
+
 
 <%= yield %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
