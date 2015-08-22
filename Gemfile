@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Simplify eCommerce
 gem 'simplify'
 
+# Dotenv for keys
+gem 'dotenv'
+
 # friendly ids
 gem "friendly_id"
 
