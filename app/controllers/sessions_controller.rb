@@ -11,13 +11,7 @@ class SessionsController < ApplicationController
 		user = User.find_by_email(user_params[:email])
 		if user && user.authenticate(user_params[:password])
 			session[:user_id] = user.id
-				if user.is_npo
-					redirect_to profile_path(current_user)
-				else
-					redirect_to profile_path(current_user)
-				end
-		else
-			redirect_to login_path
+			redirect_to profile_path(current_user)
 		end
 	end
 
