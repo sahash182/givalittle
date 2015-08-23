@@ -10,10 +10,16 @@
       <%= f.email_field :email, class:"form-control", required: true %><br />
       <%= f.label :password, "Password" %>:
       <%= f.password_field :password, class:"form-control", required: true %><br />
-      <%= f.radio_button(:user_type, true) %>
-      <%= f.label(:user_type, "I represent a charity") %>&nbsp&nbsp <br>
-      <%= f.radio_button(:user_type, false) %>
-      <%= f.label(:user_type, "I want to donate to charities") %>
+      
+      <% if logged_in? %>
+        <% if false %>
+          <%= f.radio_button(:user_type, true) %>
+          <%= f.label(:user_type, "I represent a charity") %>&nbsp&nbsp <br>
+          <%= f.radio_button(:user_type, false) %>
+          <%= f.label(:user_type, "I want to donate to charities") %>
+        <% end %>
+      <% end %>
+      
       <br>
       <br>
       <% if false %>

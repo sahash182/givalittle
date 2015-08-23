@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
 
+  # custom routes
+  get '/about', to: 'sites#about'
+
   resources :creditcards
 
   resources :charities
