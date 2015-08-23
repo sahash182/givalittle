@@ -14,13 +14,44 @@
    <%= charity.mission %>
  </div>
  <div class="dropdown btn-sm col-xs-4">
-<button class="btn btn-warning dropdown-toggle" id="btn-donate" type="button" data-toggle="dropdown">Donate
-<span class="caret"></span></button>
+<button class="btn btn-warning dropdown-toggle" id="btn-donate" type="button" data-toggle="dropdown">Donate</button>
 <ul class="dropdown-menu animated bounceInRight">
-  <li><a href="/payment/index" class="btn" >$5</a></li>
-  <li><a href="/payment/index" class="btn">$10</a></li>
-  <li><a href="/payment/index" class="btn">$15</a></li>
+  <li>
+    <script type="text/javascript"
+        src="https://www.simplify.com/commerce/simplify.pay.js"></script>
+        <button data-sc-key="sbpb_OTE4NmI5ODctYjllNy00NTkwLTg5MmUtMjljMjEzYjE1ZjBm"
+        data-name= "<%= charity.charity_name %>"
+        data-description="Donating Money to <%= charity.charity_name %>"
+        data-reference="99999"
+        data-amount="500"
+        data-color="#12B830">
+        $5
+        </button>
+  </li>
+  <li>
+    <script type="text/javascript" src="https://www.simplify.com/commerce/simplify.pay.js"></script>
+        <button data-sc-key="sbpb_OTE4NmI5ODctYjllNy00NTkwLTg5MmUtMjljMjEzYjE1ZjBm"
+        data-name= "<%= charity.charity_name %>"
+        data-description="Donating Money to <%= charity.charity_name %>"
+        data-reference="99999"
+        data-amount="1000"
+        data-color="#12B830">
+        $10
+        </button>
+  </li>
+  <li>
+    <script type="text/javascript" src="https://www.simplify.com/commerce/simplify.pay.js"></script>
+        <button data-sc-key="sbpb_OTE4NmI5ODctYjllNy00NTkwLTg5MmUtMjljMjEzYjE1ZjBm"
+        data-name= "<%= charity.charity_name %>"
+        data-description="Donating Money to <%= charity.charity_name %>"
+        data-reference="99999"
+        data-amount="1500"
+        data-color="#12B830">
+        $15
+        </button>
+  </li>
 </ul>
 </div>
 </div>
+
 <% end %>

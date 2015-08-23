@@ -17,18 +17,21 @@
           <%= f.radio_button(:user_type, false) %>
           <%= f.label(:user_type, "I want to donate to charities") %>
       <% end %>
+      <br>
         Upload A Photo
         <br>
         <br>
         <%= f.file_field :avatar %>
         <br>
         <br>
+      <% if logged_in? %>
         <% if @user.avatar %> 
           <%= image_tag @user.avatar.url(:medium) %>
             Current Photo
         <br>
         <br>
         <br>
+      <% end %>
       <% end %>
       <% if logged_in? %>
         <%= f.submit "Update Profile", class:"btn btn-primary" %>

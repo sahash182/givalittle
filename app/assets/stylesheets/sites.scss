@@ -86,3 +86,8 @@ ul{
 .button {
 vertical-align: middle;
 }
+
+.dropdown-menu {
+position:relative;
+    z-index: 10;
+}
