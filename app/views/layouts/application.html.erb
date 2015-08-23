@@ -14,13 +14,13 @@
 <link rel="icon" type="image/png" sizes="25x25" href="<%= asset_path"logo.png"  %>">
 
 <script id="digits-sdk" src="https://cdn.digits.com/1/sdk.js" async></script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<nav class="navbar navbar-default" id="nav">
+  <nav class="navbar navbar-default" id="nav">
     <!-- <div class="container-fluid"> -->
       <div class="navbar-header">
         <header>
@@ -41,15 +41,10 @@
     <!-- </div>/.container-fluid -->
  </nav>
 
-	
+  <%= yield %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-
-<button type="button" class="button-default" id="thing">I'm the button</button>
-
-<%= yield %>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </body>
 </html>
