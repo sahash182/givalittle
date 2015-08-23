@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'payment/index'
 
   post 'payment/pay'
