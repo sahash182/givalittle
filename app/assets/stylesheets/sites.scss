@@ -1,20 +1,24 @@
 body{
     color: white;
-    background-color: white;
+    background-color: #EDF4F5;
 
 }
 h2{
     text-align: center;
-    color: rgb(255, 153, 0);
+    color: #054950;
+    font-family: 'Satisfy', cursive;
 }
 h3 {
   text-align: center;
+  color: #054950;
+  font-family: 'Open Sans', sans-serif;
 }
 h4{
-    color: black;
+    color: #054950;
 }
 p{
     color: gray;
+    font-family: 'Open Sans', sans-serif;
 }
 ul{
     min-width: 10px !important;
@@ -22,21 +26,29 @@ ul{
 .dropdown{
     background-color: white;
 }
+
+.navbar {
+    background-color: #054950 !important;
+}
 #btn-donate{
-    background-color: rgb(204, 0, 0);
+    background-color: #F78F1E;
+    border-color: #F78F1E;
 
 }
 
+#about-page{
+    text-align: center;
+}
 #tagline {
   text-align: center;
-  color: black;
+  color: #789A9F;
 
 }
 #charity-div0, {
     margin-left: 5px;
     margin-right: 5px;
     background-color: white;
-    border: gray;
+    border: black;
     opacity: 0.8;
 
 }
@@ -61,8 +73,10 @@ ul{
     opacity: 0.8;
 
 }
-#legend {
-  text-align: center;
+
+#brand {
+    font-family: 'Satisfy', cursive;
+    color: white;
 }
 
 #d2{
