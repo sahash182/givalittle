@@ -3,15 +3,29 @@ body{
     background-color: #EDF4F5;
 
 }
+
+ label {
+  color: #789A9F;
+  font-family: 'Open Sans', sans-serif;
+ }
+
+ a{
+    color: white;
+ }
+
+#user_avatar{
+    color: #789A9F;
+}
 h2{
     text-align: center;
     color: #054950;
     font-family: 'Satisfy', cursive;
+    text-shadow: 1px 1px 2px grey;
 }
 h3 {
   text-align: center;
   color: #054950;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Satisfy', cursive;
 }
 h4{
     color: #054950;
@@ -50,13 +64,21 @@ ul{
     background-color: white;
     border: black;
     opacity: 0.8;
+    box-shadow: 10px 10px 5px grey;
 
+}
+#image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+    
 }
 #charity-div1, {
     margin-left: 5px;
     margin-right: 5px;
     background-color: white;
     opacity: 0.8;
+    box-shadow: 8px 8px 3px grey;
 
 }
 #charity-div2, {
@@ -64,6 +86,7 @@ ul{
     margin-right: 5px;
     background-color: white ;
     opacity: 0.8;
+    box-shadow: 5px 5px 5px grey;
 
 }
 #charity-div3, {
@@ -83,11 +106,23 @@ ul{
     display: none;
 }
 
+#bs-example-navbar-collapse-1{
+    float: right;
+}
+
+#about {
+    color: #EDF4F5;
+    font-family: 'Satisfy';
+    font-size: 14px;
+}
+
 .button {
-vertical-align: middle;
+    vertical-align: middle;
+    text-shadow: 1px 1px 2px grey;
+
 }
 
 .dropdown-menu {
-position:relative;
+    position:relative;
     z-index: 10;
 }

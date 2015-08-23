@@ -19,6 +19,7 @@
       <% end %>
       <br>
         Upload A Photo
+        <label>Upload A Photo</label>
         <br>
         <br>
         <%= f.file_field :avatar %>
@@ -34,10 +35,10 @@
       <% end %>
       <% end %>
       <% if logged_in? %>
-        <%= f.submit "Update Profile", class:"btn btn-primary" %>
-        <%= link_to "Delete Account",  @user, method: :delete, class: "btn btn-danger"  %>
+        <%= f.submit "Update Profile", class:"btn btn-warning" %>
+        <%= link_to "Delete Account",  @user, method: :delete, class: "btn btn-warning"  %>
       <% else %>
-        <%= f.submit "Join Us!", class:"btn btn-primary" %>
+        <%= f.submit "Join Us!", class:"btn btn-warning" %>
       <% end %>
     <% end %>
   </div>
