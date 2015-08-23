@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
 # Simplify eCommerce
-gem 'simplify'
-
+gem 'simplify', '~> 1.1.2'
 # friendly ids
-gem "friendly_id"
+gem 'friendly_id'
+
+# devise for multiple sessions
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'

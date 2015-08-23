@@ -1,11 +1,11 @@
 body{
 	color: white;
-	background-color: rgb(103, 103, 103);
+	background-color: white;
 
 }
 h2{
 	text-align: center;
-	color: rgb(209, 88, 33);
+	color: rgb(255, 153, 0);
 }
 h3 {
   text-align: center;
@@ -14,13 +14,13 @@ h4{
 	color: black;
 }
 p{
-	color: rgb(103, 103, 103);
+	color: gray;
 }
 ul{
 	min-width: 10px !important;
 }
 .dropdown{
-	background-color: rgb(204, 0, 0);
+	background-color: white;
 }
 #btn-donate{
 	background-color: rgb(204, 0, 0);
@@ -29,14 +29,36 @@ ul{
 
 #tagline {
   text-align: center;
-  color: rgb(255, 153, 0);
+  color: black;
 
 }
-#charity-div{
+#charity-div0, {
 	margin-left: 5px;
 	margin-right: 5px;
 	background-color: white;
-	opacity: 0.9;
+	border: gray;
+	opacity: 0.8;
+
+}
+#charity-div1, {
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+	opacity: 0.8;
+
+}
+#charity-div2, {
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white ;
+	opacity: 0.8;
+
+}
+#charity-div3, {
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+	opacity: 0.8;
 
 }
 #legend {
