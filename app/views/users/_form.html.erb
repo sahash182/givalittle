@@ -23,7 +23,7 @@
         <%= f.file_field :avatar %>
         <br>
         <br>
-        <% if logged_in? && (@user.avatar == !nil)%> 
+        <% if @user.avatar %> 
           <%= image_tag @user.avatar.url(:medium) %>
             Current Photo
         <br>
