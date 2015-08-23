@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# amazon photo upload
+gem 'aws-sdk', '~> 1.6'
+# photos
+gem "paperclip", "~> 4.3"
 # Animations
 gem 'animate.css-rails', '~> 3.2.0'
 
