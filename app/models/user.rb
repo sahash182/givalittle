@@ -1,7 +1,5 @@
 class User < ActiveRecord::Base
 
-
-  extend FriendlyId
-  friendly_id :username, use: :slugged
-
+	has_secure_password
+	
 end

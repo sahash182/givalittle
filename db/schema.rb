@@ -11,22 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822215118) do
+ActiveRecord::Schema.define(version: 20150823032253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "charities", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "username"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "slug"
+    t.string   "charity_name"
+    t.string   "mission"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
-
-  add_index "charities", ["slug"], name: "index_charities_on_slug", unique: true, using: :btree
 
   create_table "creditcards", force: :cascade do |t|
     t.string   "number"
@@ -40,13 +36,12 @@ ActiveRecord::Schema.define(version: 20150822215118) do
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "phone"
     t.string   "password_digest"
+    t.string   "phone"
+    t.boolean  "user_type"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "slug"
+    t.string   "email"
   end
-
-  add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
 
 end
