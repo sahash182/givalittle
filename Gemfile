@@ -4,7 +4,10 @@ source 'https://rubygems.org'
 gem 'simplify'
 
 # friendly ids
-gem "friendly_id"
+gem 'friendly_id'
+
+# devise for multiple sessions
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'

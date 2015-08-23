@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :views
+  devise_for :users
   root "sites#index"
 
-  resources :users
-
-  resources :creditcards
-
-  resources :charities
 
 end
