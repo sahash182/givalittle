@@ -1,0 +1,21 @@
+<div class="signuppage">
+
+  <div class="col-sm-6 col-sm-offset-3">
+  <br>
+    <div class="signupbox">
+      <legend>Add Your Charity</legend>
+      <%= form_for @charity do |f| %>
+        <%= f.label :charity_name, "Charity Name" %>:
+        <%= f.text_field :charity_name, class:"form-control", required: true %><br />
+        <%= f.label :mission, "Mission" %>:
+        <%= f.text_area :mission, class:"form-control", required: true %><br />
+        <% if false %>
+        <%= f.label :avatar, "Organization Logo (if available)" %>:
+        <%= f.file_field :avatar %>
+        <% end %> 
+        <br>
+        <%= f.submit "Add Your Charity", class:"btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

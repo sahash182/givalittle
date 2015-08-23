@@ -29,6 +29,9 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 # >>>>>>> ccd88f5521a25ab82b041c1273adeddd8a57eb8c
 
+  # custom routes
+  get '/about', to: 'sites#about'
+
   resources :creditcards
 
   resources :charities

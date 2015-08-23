@@ -1,21 +1,74 @@
+body{
+    color: white;
+    background-color: white;
+
+}
+h2{
+    text-align: center;
+    color: rgb(255, 153, 0);
+}
 h3 {
   text-align: center;
+}
+h4{
+    color: black;
+}
+p{
+    color: gray;
+}
+ul{
+    min-width: 10px !important;
+}
+.dropdown{
+    background-color: white;
+}
+#btn-donate{
+    background-color: rgb(204, 0, 0);
+
 }
 
 #tagline {
   text-align: center;
-  
-}
+  color: black;
 
+}
+#charity-div0, {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    border: gray;
+    opacity: 0.8;
+
+}
+#charity-div1, {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    opacity: 0.8;
+
+}
+#charity-div2, {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white ;
+    opacity: 0.8;
+
+}
+#charity-div3, {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    opacity: 0.8;
+
+}
 #legend {
   text-align: center;
 }
 
 #d2{
-	display: none;
+    display: none;
 }
 
 .button {
 vertical-align: middle;
 }
-
