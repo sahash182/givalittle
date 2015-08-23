@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Simplify eCommerce
 gem 'simplify'
 
+# Typhoeus helps with HTTP requests
+gem 'typhoeus'
 # Dotenv for keys
 gem 'dotenv'
 
