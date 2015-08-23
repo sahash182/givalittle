@@ -54,7 +54,7 @@ class SessionsController < ApplicationController
 		# # 		end
 		# # else
 		# 	redirect_to login_path
-		end
+		# end
 	end
 
 	def destroy 

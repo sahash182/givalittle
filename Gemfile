@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Animations
+gem 'animate.css-rails', '~> 3.2.0'
+
 # Simplify eCommerce
 gem 'simplify', '~> 1.1.2'
 
