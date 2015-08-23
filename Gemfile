@@ -1,17 +1,14 @@
 source 'https://rubygems.org'
 
 # Simplify eCommerce
-<<<<<<< HEAD
-gem 'simplify'
+gem 'simplify', '~> 1.1.2'
 
 # Typhoeus helps with HTTP requests
 gem 'typhoeus'
+
 # Dotenv for keys
 gem 'dotenv'
 
-=======
-gem 'simplify', '~> 1.1.2'
->>>>>>> ccd88f5521a25ab82b041c1273adeddd8a57eb8c
 # friendly ids
 gem "friendly_id"
 
