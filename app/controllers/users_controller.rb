@@ -14,31 +14,39 @@ class UsersController < ApplicationController
 #       render :new
 #     end
 # =======
-     if current_user
-       redirect_to profile_path(current_user)
-     else
+    if current_user
+      redirect_to profile_path(current_user)
+    else
       @user = User.new
-     render :new
-      end
+      render :new
+    end
   end
 
   def create
-    if current_user 
-      redirect_to profile_path(current_user)
-    else 
-      user=User.new(user_params)
-      if user.save 
-        session[:user_id] = user.id
-        if user.user_type
-          redirect_to new_charity_path 
-        else
-        redirect_to profile_path(current_user)
-        end
-      else 
-      redirect_to signup_path
+    @user = User.new(user_params)
 
-      end
+    if @user.save
+      redirect_to @user, notice: 'User was successfully created.'
+    else
+      redirect_to signup_path
     end
+
+    # if current_user 
+    #   redirect_to profile_path(current_user)
+    # else 
+    #   user=User.new(user_params)
+    #   if user.save 
+    #     session[:user_id] = user.id
+    #     if user.user_type
+    #       redirect_to new_charity_path 
+    #     else
+    #     redirect_to profile_path(current_user)
+    #     end
+    #   else 
+    #   redirect_to signup_path
+
+    #   end
+    # end
   end
 
   def show
@@ -54,15 +62,27 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find(params[:id])
-    if current_user
-      # flash[:notice] = "Successfully updated profile!"
-      user.update_attributes(user_params)
-      redirect_to profile_path(current_user)
+    if @user.update(user_params)
+      if session[:checkout]
+        redirect_to profile_path, notice: 'User was successfully updated.'
+      else
+        redirect_to edit_profile_path, notice: 'User was successfully updated.'
+      end
     else
-      flash[:error] = user.errors.full_messages.join(', ')
-      redirect_to edit_profile_path
+      render :edit
     end
+
+
+
+    # user = User.find(params[:id])
+    # if current_user
+    #   # flash[:notice] = "Successfully updated profile!"
+    #   user.update_attributes(user_params)
+    #   redirect_to profile_path(current_user)
+    # else
+    #   flash[:error] = user.errors.full_messages.join(', ')
+    #   redirect_to edit_profile_path
+    # end
   end
 
   def destroy
@@ -76,6 +96,15 @@ class UsersController < ApplicationController
   end
   
   private 
+    def set_user
+      @user = User.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def user_params
+      params.require(:user).permit(:first_name, :last_name, :password, :user_type, :phone, :digits_id, :digits_access_token, :digits_access_secret, :email)
+    end
+
     def user_params 
       params.require(:user).permit(:first_name, :last_name, :password, :phone, :user_type, :email)
     end

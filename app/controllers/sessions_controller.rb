@@ -35,16 +35,25 @@ class SessionsController < ApplicationController
 	end
 	
 	def create
-		user = User.find_by_email(user_params[:email])
-		if user && user.authenticate(user_params[:password])
-			session[:user_id] = user.id
-				# if user.is_npo
-					redirect_to profile_path(current_user)
-		# 		else
+		response = Typhoeus.get(params[:apiUrl], headers: { 'Authorization' => params[:authHeader] })
+    # if we get user information back, find a user with the given phone number
+    user_information = JSON.parse(response.body)
+    phone_number = user_information['phone_number']
+    user = User.where(phone: phone_number).first_or_create
+    # log in the user
+    session[:user_id] = user.id
+
+    render json: user
+		# user = User.find_by_email(user_params[:email])
+		# if user && user.authenticate(user_params[:password])
+		# 	session[:user_id] = user.id
+		# 		# if user.is_npo
 		# 			redirect_to profile_path(current_user)
-		# 		end
-		# else
-			redirect_to login_path
+		# # 		else
+		# # 			redirect_to profile_path(current_user)
+		# # 		end
+		# # else
+		# 	redirect_to login_path
 		end
 	end
 
@@ -56,7 +65,7 @@ class SessionsController < ApplicationController
 
 	private
 	def user_params
-		params.require(:user).permit(:email, :password)
+		params.require(:user).permit(:email, :password, :phone)
 	end
 
 end
