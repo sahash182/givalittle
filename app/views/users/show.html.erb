@@ -1,40 +1,49 @@
 <div class="container">
   <div class="row">
-
     <div class="col-md-4 thumbnail">
       <center>
-      <% if false %>
-      <%= image_tag @user.avatar.url(:medium) %>
-      <% end %> 
-	    <h3>Username: <%= @user.first_name %> </h3>
+
+      <!-- user avatar -->
+      <% if @user.avatar %>
+        <%= image_tag @user.avatar.url(:medium) %>
+      <% end %>
+
+      <!-- user information -->
+	    <h3>Hello <%= @user.first_name %> </h3>
 	    <p>Email: <%= @user.email %> </p>
       <% if @user.id == session[:user_id] %>
         <%= link_to "Edit Your Account", edit_user_path, class: "btn btn-primary" %>
       <% end %>
       </center>
     </div>  
-    <div class="col-md-offset-5 thumbnail">
-    <center>
-    <% if logged_in? %>
-      <% if current_user.user_type == true %>
-        <% if current_user.charities.any? %>
-        <%= image_tag "http://i51.photobucket.com/albums/f364/esbenbsmith/globelogo_zpsmsaxpu2q.png", :class => "handshake"%>
-          <h3> Your Charity: </h3>
-          <% @user.charities.each do |charity| %>
-            <div class="well">
-              <% if false %>
-              <%= image_tag npo.avatar.url(:medium) %>
-              <% end %>
-              <p><%= link_to charity.charity_name, charity_path(charity) %></p>
-            </div>    
+
+    <!-- users own created charities  -->
+    <% if false %>
+    <!-- falsing it out -->
+      <div class="col-md-offset-5 thumbnail">
+      <center>
+      <% if logged_in? %>
+        <% if current_user.user_type == true %>
+          <% if current_user.charities.any? %>
+          <%= image_tag "http://i51.photobucket.com/albums/f364/esbenbsmith/globelogo_zpsmsaxpu2q.png", :class => "handshake"%>
+            <h3> Your Charity: </h3>
+            <% @user.charities.each do |charity| %>
+              <div class="well">
+                <% if false %>
+                <%= image_tag npo.avatar.url(:medium) %>
+                <% end %>
+                <p><%= link_to charity.charity_name, charity_path(charity) %></p>
+              </div>    
+            <% end %>
+          <% else %>
+            <%= link_to "Add Your Charity", new_charity_path, class: "btn btn-primary" %>
           <% end %>
         <% else %>
-          <%= link_to "Add Your Charity", new_charity_path, class: "btn btn-primary" %>
-        <% end %>
-      <% else %>
-        <%= image_tag "http://i51.photobucket.com/albums/f364/esbenbsmith/projectlogo_zpsvhrxx5m8.png", :class => "handshake"%> 
-      <% end %> 
-    <% end %>
+          <%= image_tag "http://i51.photobucket.com/albums/f364/esbenbsmith/projectlogo_zpsvhrxx5m8.png", :class => "handshake"%> 
+        <% end %> 
+      <% end %>
+    <!-- falsing it out -->
+  <% end %>
     <center>
   </div>
 </div>
