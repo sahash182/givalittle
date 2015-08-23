@@ -17,16 +17,17 @@
       <br>
       <br>
       <% if false %>
-      <%= f.file_field :avatar %>
-      <br>
-
+        <%= f.file_field :avatar %>
+        <br>
+        <% if logged_in? %>
+          <%= image_tag @user.avatar.url(:medium) %>
+            Current Photo
+        <% end %> 
+        <br>
+        <br>
+        <br>
+      <% end %>
       <% if logged_in? %>
-       <%= image_tag @user.avatar.url(:medium) %>
-        Current Photo
-       <% end %> 
-        <br>
-        <br>
-        <br>
         <%= f.submit "Update Profile", class:"btn btn-primary" %>
         <%= link_to "Delete Account",  @user, method: :delete, class: "btn btn-danger"  %>
       <% else %>

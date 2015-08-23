@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+   <div class="col-md-5">
+		<div class="thumbnail"> 
+			<center>
+				<% if false %>
+				<%= image_tag @charity.avatar.url(:medium) %>
+				<% end %>
+		    <h4><%= @charity.charity_name %> </h4>
+		    <p>Mission: <%= @charity.mission %> </p>
+	      <% if @charity.user.id == session[:user_id] %>
+	 				<%= link_to "Edit Your Charity's Profile", edit_charity_path, class: "btn btn-primary" %>
+	      <hr>
+	      <% end %>
+      </center>
+		</div>
+  </div>
+  <div class="col-md-offset-5">
+  	<div class="thumbnail"> 
+		</div>
+  </div>
+</div>
