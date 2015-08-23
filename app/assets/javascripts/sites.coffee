@@ -1,5 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+>>>>>>> parent of 29ddcf9... hold place
 =======
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
