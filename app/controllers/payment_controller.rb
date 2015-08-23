@@ -3,6 +3,7 @@ class PaymentController < ApplicationController
   end
 
  def pay
+        params['simplifyToken']
        payment = Simplify::Payment.create({
            amount: '1000',
            token: params['simplifyToken'],
