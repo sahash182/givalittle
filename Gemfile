@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 # Simplify eCommerce
-gem 'simplify'
-
+gem 'simplify', '~> 1.1.2'
 # friendly ids
 gem 'friendly_id'
 
