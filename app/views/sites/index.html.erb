@@ -7,13 +7,12 @@
   <div class="well col-xs-6">Donation Amount</div>
 </div>
 
-<%= @charities %>
 
 <% @charities.each do |charity|%>
 <div class="well row">
   <div class="well col-md-9">
-  	<h2><%= charity.full_name %></h2>
-  	<h4><%= charity.description %></h4>
+  	<h2><%= charity.first_name %></h2>
+    <h4><%= charity.description %></h4>
   </div>
 
 
