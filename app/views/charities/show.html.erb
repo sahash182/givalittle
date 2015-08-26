@@ -9,7 +9,7 @@
 		    <h4><%= @charity.charity_name %> </h4>
 		    <p>Mission: <%= @charity.mission %> </p>
 	      <% if @charity.user.id == session[:user_id] %>
-	 				<%= link_to "Edit Your Charity's Profile", edit_charity_path, class: "btn btn-primary" %>
+	 				<%= link_to "Edit Your Charity's Profile", edit_charity_path, class: "btn btn-dark" %>
 	      <hr>
 	      <% end %>
       </center>

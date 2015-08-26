@@ -18,8 +18,8 @@
           <%= f.label(:user_type, "I want to donate to charities") %>
       <% end %>
       <br>
-        Upload A Photo
-        <label>Upload A Photo</label>
+      <br>
+       <label> Upload a Photo</label>
         <br>
         <br>
         <%= f.file_field :avatar %>
@@ -35,10 +35,10 @@
       <% end %>
       <% end %>
       <% if logged_in? %>
-        <%= f.submit "Update Profile", class:"btn btn-warning" %>
-        <%= link_to "Delete Account",  @user, method: :delete, class: "btn btn-warning"  %>
+        <%= f.submit "Update Profile", class:"btn btn-dark" %>
+        <%= link_to "Delete Account",  @user, method: :delete, class: "btn btn-dark"  %>
       <% else %>
-        <%= f.submit "Join Us!", class:"btn btn-warning" %>
+        <%= f.submit "Join Us!", class:"btn btn-dark" %>
       <% end %>
     <% end %>
   </div>

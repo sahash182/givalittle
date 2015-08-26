@@ -12,7 +12,7 @@
 	    <h3>Hello <%= @user.first_name %> </h3>
 	    <p>Email: <%= @user.email %> </p>
       <% if @user.id == session[:user_id] %>
-        <%= link_to "Edit Your Account", edit_user_path, class: "btn btn-warning" %>
+        <%= link_to "Edit Your Account", edit_user_path, class: "btn btn-dark" %>
       <% end %>
       </center>
     </div>  
@@ -36,7 +36,7 @@
               </div>    
             <% end %>
           <% else %>
-            <%= link_to "Add Your Charity", new_charity_path, class: "btn btn-warning" %>
+            <%= link_to "Add Your Charity", new_charity_path, class: "btn btn-dark" %>
           <% end %>
         <% else %>
           <%= image_tag "http://i51.photobucket.com/albums/f364/esbenbsmith/projectlogo_zpsvhrxx5m8.png", :class => "handshake"%> 
