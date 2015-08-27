@@ -30,7 +30,7 @@ h2{
     text-align: center;
     color: #054950;
       font-family: 'Satisfy', cursive;
-    text-shadow: 1px 1px 2px grey;
+    text-shadow: 1px 1px 2px gray;
 }
 h3 {
   text-align: center;
@@ -57,10 +57,12 @@ ul{
 }
 
 .about-section {
-    margin-top: 100px;
+    
+    padding-right: 180px;
+    padding-left: 180px;
 }
 .about {
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 50px;
 }
 
@@ -81,7 +83,7 @@ ul{
 
 #aboutinfo{
     font-size: 20px;
-    text-align: center;
+    /*text-align: center;*/
     text-shadow: 1px 1px 1px #000000;
 }
 #tagline {
@@ -91,43 +93,35 @@ ul{
 
 
 }
+.col-lg-1{
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
 #charity-div0, {
-    margin-left: 200px;
-    margin-right: 200px;
+    
     background-color: white;
     border: black;
     opacity: 0.8;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 10px 10px 5px gray;
+    z-index: 2;
+    padding-right: 60px;
 
 }
+
+#cards{
+    margin: 0 auto;
+    display: block;
+    float: none;
+}
+
+
 #image{
     display: block;
     margin-left: auto;
     margin-right: auto 
     
-}
-#charity-div1, {
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: white;
-    opacity: 0.8;
-    box-shadow: 8px 8px 3px grey;
-
-}
-#charity-div2, {
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: white ;
-    opacity: 0.8;
-    box-shadow: 5px 5px 5px grey;
-
-}
-#charity-div3, {
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: white;
-    opacity: 0.8;
-
 }
 
 #brand {
@@ -139,6 +133,7 @@ ul{
     display: none;
 }
 
+
 #bs-example-navbar-collapse-1{
     float: right;
 }
@@ -148,10 +143,13 @@ ul{
     font-family: 'Satisfy';
     font-size: 14px;
 }
+#charity-div0 {
+    /*z-index: 2;*/
+}
 
 .button {
     vertical-align: middle;
-    text-shadow: 1px 1px 2px grey;
+    text-shadow: 1px 1px 2px gray;
 
 }
 
@@ -162,9 +160,59 @@ ul{
 
 #five {
     min-width: 70px;
-    background-color: grey;
+    background-color: gray;
 }
 
 #btn-donate{
     border: black;
+    float: right;
+}
+
+ h1 {
+   font-family: 'Satisfy', cursive;
+
+ }
+
+#user-form {
+  color: black;
+}
+ #landing-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/flowers.jpeg);
+  background-size: cover;
+  position: relative;
+  margin-top: -20px;
+}
+
+.header-title {
+  text-align: center;
+  color: white;
+  background-position: center;
+  padding: 10% 0;
+
+    font-family: 'Satisfy', cursive;
+}
+
+.header-title-hgroup {
+  border: 1px solid white;
+  border-radius: 25px;
+  display: inline-block;
+  padding: 0.3em 1em 0.5em 1em;
+}
+
+
+.logo {
+  font-family: logo;
+  font-size: 9rem;
+  text-shadow: 1px 2px 4px #000000;
+}
+
+.tag-line {
+   font: satisfy;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 1px 2px 2px #000000;
+  /*background-color: rgba(192,192,192,0.7);*/
 }
